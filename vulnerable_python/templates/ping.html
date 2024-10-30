@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Ping Result</h2>
+    {% if ip %}
+        <p>Ping results for {{ ip }}:</p>
+        <pre>{{ result }}</pre>
+    {% else %}
+        <p>Please provide an IP address.</p>
+    {% endif %}
+{% endblock %}

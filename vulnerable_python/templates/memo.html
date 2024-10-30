@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Memos</h2>
+    <ul>
+        {% for memo in memos %}
+            <li>{{ memo.content }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        <label>Add a Memo</label>
+        <input type="text" name="content">
+        <input type="submit" value="Add Memo">
+    </form>
+{% endblock %}

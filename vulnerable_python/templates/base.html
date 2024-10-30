@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Coding Practice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Secure Coding Practice Application</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('register') }}">Register</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('profile') }}">Profile</a>
+        <a href="{{ url_for('memo') }}">Memo</a>
+        <a href="{{ url_for('fetch') }}?url=https://example.com">Fetch Data</a>
+        <a href="{{ url_for('ping') }}?ip=8.8.8.8">Ping Service</a>
+        <a href="{{ url_for('view') }}?file=sample.txt">View File</a>
+    </nav>
+    <main>
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+        <p>Secure Coding Practice &copy; 2024</p>
+    </footer>
+</body>
+</html>
