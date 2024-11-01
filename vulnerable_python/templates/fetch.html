@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h2>Fetched Data</h2>
-    <pre>{{ content }}</pre>
+{% extends 'base.html' %} {% block content %}
+<h2>Fetched Data</h2>
+<pre><iframe sandbox="allow-same-origin" srcdoc="{{ content }}" width="100%" height="400px"></iframe></pre>
 {% endblock %}
